@@ -109,6 +109,24 @@
                 <if test="curTime != null">#{curTime,jdbcType=TIMESTAMP},</if>
         </trim>
     </insert>
+
+
+    <insert id="insertBatch">
+        insert into stock_market_index_info
+        ( id,mark_Id,cur_time
+        ,mark_name,cur_point,current_price
+        ,updown_rate,trade_account,trade_volume
+        )
+        values
+        <foreach collection="list" item="smi" separator=",">
+            (#{smi.id,jdbcType=BIGINT},#{smi.markId,jdbcType=CHAR},#{smi.curTime,jdbcType=TIMESTAMP}
+            ,#{smi.markName,jdbcType=VARCHAR},#{smi.curPoint,jdbcType=DECIMAL},#{smi.currentPrice,jdbcType=DECIMAL}
+            ,#{smi.updownRate,jdbcType=DECIMAL},#{smi.tradeAccount,jdbcType=BIGINT},#{smi.tradeVolume,jdbcType=BIGINT}
+            )
+        </foreach>
+    </insert>
+
+
     <update id="updateByPrimaryKeySelective" parameterType="com.itheima.stock.pojo.entity.StockMarketIndexInfo">
         update stock_market_index_info
         <set>

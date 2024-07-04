@@ -1,4 +1,4 @@
-package com.itheima.stock.vo;
+package com.itheima.stock.pojo.domain;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

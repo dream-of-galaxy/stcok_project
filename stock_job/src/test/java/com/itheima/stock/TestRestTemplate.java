@@ -1,5 +1,6 @@
 package com.itheima.stock;
 
+import com.itheima.stock.service.StockTimerTaskService;
 import lombok.Data;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,8 @@ public class TestRestTemplate {
 
     @Autowired
     private RestTemplate restTemplate;
+    @Autowired
+    private StockTimerTaskService stockTimerTaskService;
 
     /**
      * 测试get请求携带url参数，访问外部接口
@@ -76,5 +79,10 @@ public class TestRestTemplate {
         System.out.println(result);
     }
 
+    /*测试国内大盘数据*/
+    @Test
+    public void testInnerGetMarketInfo(){
+        stockTimerTaskService.getInnerMarketInfo();
+    }
 
 }

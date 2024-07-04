@@ -1,7 +1,7 @@
 package com.itheima.stock.config;
 
 import com.itheima.stock.utils.IdWorker;
-import com.itheima.stock.vo.StockInfoConfig;
+import com.itheima.stock.pojo.domain.StockInfoConfig;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

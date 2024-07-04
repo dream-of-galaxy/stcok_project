@@ -14,7 +14,7 @@ import com.itheima.stock.mapper.StockMarketIndexInfoMapper;
 import com.itheima.stock.pojo.domain.StockUpdownDomain;
 import com.itheima.stock.service.StockService;
 import com.itheima.stock.utils.DateTimeUtil;
-import com.itheima.stock.vo.StockInfoConfig;
+import com.itheima.stock.pojo.domain.StockInfoConfig;
 import com.itheima.stock.vo.resp.PageResult;
 import com.itheima.stock.vo.resp.R;
 import com.itheima.stock.vo.resp.ResponseCode;
@@ -27,7 +27,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.net.URLEncoder;
 import java.util.*;
 
